@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project One</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id ="title">
+        <h1 class = "title_lettering">Serás capaz de vencer?</h1>
+    </section>
+    
+    <section id="seleccion_personaje" class="seleccion_personaje_container">
+        <h2>Selecciona a un personaje:</h2>
+        <div id="tarjetas_personajes" class="tarjetas_personajes">
+        </div>
+        <button id="seleccionar_personaje">Seleccionar</button>
+    </section>
+
+    <section id="seleccion_ataque" class="seleccion_ataque_container">
+        <div class="battle_title">
+            <p><span id="nombre_personaje"></span> vs Darth Sidious</p>
+        </div>
+        <div class="personajes_combate">
+            <div class="personaje_container">
+                <p>HP: <span id="vida_personaje">5</span></p>
+            </div>
+            <div id="mensaje_final"></div>
+            <div class="enemigo_container">
+                <p>HP: <span id="vida_palpatine">5</span></p>
+            </div>
+        </div>
+        <div class="ataques">
+            <h2>Elige: </h2>
+            <button id="ataque_piedra">Piedra  ✊🏻</button>
+            <button id="ataque_papel">Papel  ✋🏻</button>
+            <button id="ataque_tijera">Tijera  ✌🏻</button>
+        </div>
+        <div id="mensajes">
+        
+        </div>
+    </section>
+
+    <button id="boton_reiniciar">Reiniciar</button>
+    <script src="js/codigo.js"></script>
+
+</body>
+</html>
