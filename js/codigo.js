@@ -8,12 +8,12 @@ const boton_tijera = document.getElementById("ataque_tijera")
 //variables funcion seleccionPersonaje
 const mensaje_final = document.getElementById("mensaje_final")
 const section_seleccion_personaje = document.getElementById("seleccion_personaje")
-const chewaca_input = document.getElementById("Chewaca")
-const han_solo_input = document.getElementById("Han Solo")
-const bobba_fett_input = document.getElementById("Bobba Fett")
-const captain_rex_input = document.getElementById("Captain Rex")
-const ig_11_input = document.getElementById("IG-11")
-const the_mandalorian_input = document.getElementById("The Mandalorian")
+// const chewaca_input = document.getElementById("Chewaca")
+// const han_solo_input = document.getElementById("Han Solo")
+// const bobba_fett_input = document.getElementById("Bobba Fett")
+// const captain_rex_input = document.getElementById("Captain Rex")
+// const ig_11_input = document.getElementById("IG-11")
+// const the_mandalorian_input = document.getElementById("The Mandalorian")
 const nombre_personaje = document.getElementById("nombre_personaje")
 const titulo = document.getElementById("title")
 //variables funcion mensaje_output
@@ -86,17 +86,17 @@ function seleccionPersonaje(){
     titulo.style.display = "none"
 
     if (chewaca_input.checked){
-        nombre_personaje.innerHTML = "Chewaca"
+        nombre_personaje.innerHTML = chewaca.nombre
     } else if (han_solo_input.checked){
-        nombre_personaje.innerHTML = "Han Solo"
+        nombre_personaje.innerHTML = han_solo.nombre
     } else if (bobba_fett_input.checked){
-        nombre_personaje.innerHTML = "Bobba Fett"
+        nombre_personaje.innerHTML = bobba_fett.nombre
     } else if (captain_rex_input.checked){
-        nombre_personaje.innerHTML = "Captain Rex"
+        nombre_personaje.innerHTML = captain_rex.nombre
     } else if (ig_11_input.checked){
-        nombre_personaje.innerHTML = "IG-11"
+        nombre_personaje.innerHTML = ig_11.nombre
     } else if (the_mandalorian_input.checked){
-        nombre_personaje.innerHTML = "The Mandalorian"
+        nombre_personaje.innerHTML = the_mandalorian.nombre
     } else {
         alert("Debes seleccionar un personaje para iniciar el juego!")
         location.reload()
