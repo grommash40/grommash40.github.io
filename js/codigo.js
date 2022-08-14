@@ -194,7 +194,3 @@ function mensaje_output_final(estado){
     boton_tijera.disabled = true
 }
 window.addEventListener("load", startGame)
-
-
-
-    
