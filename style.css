@@ -120,6 +120,32 @@ body{
     color: white;
     font-size: 2em;
 }
+.personaje_container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding: 15px 15px;
+    align-items: center;
+}
+.personaje_container img{
+    height: 80%;
+    width: 90%;
+    border-radius: 25px;
+}
+.enemigo_container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding: 15px 15px;
+    align-items: center;
+
+}
+.enemigo_container img{
+    height: 80%;
+    width: 100%;
+}
 .ataques{
     display: flex;
     margin: 5px 0px;
@@ -176,7 +202,7 @@ body{
 #boton_reiniciar:hover{
     background-color: #530707;
 }
-#mensaje_final{
+.mensaje_final{
     background-color: #F24C4C;
     position: absolute;
     width: 25%;
@@ -185,13 +211,70 @@ body{
     border-radius: 15px;
     text-align: center;
     transition: font-size 2s, background-color 1s;
-
 }
-#mensaje_final p{
+.mensaje_final p{
     height: 100%;
     font-size: 2em;
 }
-#mensaje_final:hover{
+.mensaje_final:hover{
     font-size: 1.2em;
     background-color: black;
+}
+@media (max-width: 750px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #F7D716;
+    }
+    .tarjetas_personajes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 950px;
+    }
+    .mensaje_final{
+        background-color: #F24C4C;
+        position: absolute;
+        width: 25%;
+        height: 10%;
+        border: transparent;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .mensaje_final:hover{
+        background-color: #F24C4C;
+    }
+    .mensaje_final p{
+        height: 100%;
+        font-size: 0.8em;
+    }
+    .ataques{
+        display: flex;
+        margin: 5px 0px;
+        background-color: #293462;
+        border-radius: 20px;
+        width: 60%;
+        height: 70px;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        font-size: 1.5em;
+    }
+    #boton_reiniciar{
+        margin: 0 0 20px 0;
+        width: 15%;
+        height: 50px;
+        background-color: #F24C4C;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 1.2em;
+    }
+    .battle_title{
+        font-size: 2.5em;
+        margin: 15px 0px; 
+    }
 }

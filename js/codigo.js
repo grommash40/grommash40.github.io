@@ -47,11 +47,11 @@ let han_solo = new personaje("Han Solo", "/assets/images.png")
 
 let bobba_fett = new personaje("Bobba Fett", "/assets/images.png")
 
-let capitan_rex = new personaje("Capitán Rex", "/assets/images.png")
+let capitan_rex = new personaje("Capitán-Rex", "/assets/images.png")
 
 let ig_11 = new personaje("IG-11", "/assets/images.png")
 
-let din_djarin = new personaje("Din Djarin", "/assets/images.png")
+let din_djarin = new personaje("Din-Djarin", "/assets/images.png")
 
 personajes.push(chewaca,han_solo,bobba_fett,capitan_rex,ig_11,din_djarin)
 
@@ -65,10 +65,10 @@ function startGame(){
     boton_tijera.addEventListener("click", ataque_tijera)
     boton_reiniciar.addEventListener("click", restart_game) 
 
-    personajes.forEach((personaje) => {
+       personajes.forEach((personaje) => {
         opcion_personaje = `
         <section class="personaje">
-            <input type="radio" name =${personaje.nombre}>
+            <input type="radio" name =${personaje.nombre} id=${personaje.nombre}>
             <label for=${personaje.nombre}>
             <p>${personaje.nombre}</p>
             <img src=${personaje.foto} alt="">
@@ -85,18 +85,25 @@ function seleccionPersonaje(){
     section_seleccion_personaje.style.display = "none"
     titulo.style.display = "none"
 
-    if (chewaca_input.checked){
+    const chewaca_input = document.getElementById("Chewaca")
+    let han_solo_input = document.getElementById("Han")
+    let bobba_fett_input = document.getElementById("Bobba")
+    let captitan_rex_input = document.getElementById("Capitán-Rex")
+    let ig_11_input = document.getElementById("IG-11")
+    let din_djarin_input = document.getElementById("Din-Djarin")
+
+     if (chewaca_input.checked){
         nombre_personaje.innerHTML = chewaca.nombre
     } else if (han_solo_input.checked){
         nombre_personaje.innerHTML = han_solo.nombre
     } else if (bobba_fett_input.checked){
         nombre_personaje.innerHTML = bobba_fett.nombre
-    } else if (captain_rex_input.checked){
-        nombre_personaje.innerHTML = captain_rex.nombre
+    } else if (captitan_rex_input.checked){
+        nombre_personaje.innerHTML = capitan_rex.nombre
     } else if (ig_11_input.checked){
         nombre_personaje.innerHTML = ig_11.nombre
-    } else if (the_mandalorian_input.checked){
-        nombre_personaje.innerHTML = the_mandalorian.nombre
+    } else if (din_djarin_input.checked){
+        nombre_personaje.innerHTML = din_djarin.nombre
     } else {
         alert("Debes seleccionar un personaje para iniciar el juego!")
         location.reload()
@@ -140,7 +147,7 @@ function restart_game(){
 function mensaje_output(){
     let parrafo = document.createElement("p")
     mensajes.appendChild(parrafo)
-    parrafo.innerHTML = ataque_jugador + "        " + ataque_enemigo + "  " + veredicto
+    parrafo.innerHTML = ataque_jugador + " " + ataque_enemigo + " " + veredicto
 }
 
 function elegir_ganador(){
