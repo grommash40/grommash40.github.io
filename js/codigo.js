@@ -5,15 +5,12 @@ const seleccionar_personaje = document.getElementById("seleccionar_personaje")
 const boton_piedra = document.getElementById("ataque_piedra")
 const boton_papel = document.getElementById("ataque_papel")
 const boton_tijera = document.getElementById("ataque_tijera")
+const boton_piedra_responsive = document.getElementById("ataque_piedra_responsive")
+const boton_papel_responsive = document.getElementById("ataque_papel_responsive")
+const boton_tijera_responsive = document.getElementById("ataque_tijera_responsive")
 //variables funcion seleccionPersonaje
 const mensaje_final = document.getElementById("mensaje_final")
 const section_seleccion_personaje = document.getElementById("seleccion_personaje")
-// const chewaca_input = document.getElementById("Chewaca")
-// const han_solo_input = document.getElementById("Han Solo")
-// const bobba_fett_input = document.getElementById("Bobba Fett")
-// const captain_rex_input = document.getElementById("Captain Rex")
-// const ig_11_input = document.getElementById("IG-11")
-// const the_mandalorian_input = document.getElementById("The Mandalorian")
 const nombre_personaje = document.getElementById("nombre_personaje")
 const titulo = document.getElementById("title")
 //variables funcion mensaje_output
@@ -63,6 +60,9 @@ function startGame(){
     boton_piedra.addEventListener("click", ataque_piedra)
     boton_papel.addEventListener("click", ataque_papel)
     boton_tijera.addEventListener("click", ataque_tijera)
+    boton_piedra_responsive.addEventListener("click", ataque_piedra)
+    boton_papel_responsive.addEventListener("click", ataque_papel)
+    boton_tijera_responsive.addEventListener("click", ataque_tijera)
     boton_reiniciar.addEventListener("click", restart_game) 
 
        personajes.forEach((personaje) => {
@@ -85,7 +85,7 @@ function seleccionPersonaje(){
     section_seleccion_personaje.style.display = "none"
     titulo.style.display = "none"
 
-    const chewaca_input = document.getElementById("Chewaca")
+    let chewaca_input = document.getElementById("Chewaca")
     let han_solo_input = document.getElementById("Han")
     let bobba_fett_input = document.getElementById("Bobba")
     let captitan_rex_input = document.getElementById("Capitán-Rex")
@@ -172,19 +172,19 @@ function elegir_ganador(){
 
 function revisar_vidas(){
     if(contador_vida_jugador == 0){
-        mensaje_output_final("derrota")
+        mensaje_output_final("Derrota")
     } else if(contador_vida_palpatine == 0){
-        mensaje_output_final("victoria")
+        mensaje_output_final("Victoria")
     }
 }
 
 function mensaje_output_final(estado){
     boton_reiniciar.style.display = "block"
-    if(estado == "derrota"){
+    if(estado == "Derrota"){
         mensaje_final.style.display = "block"
         mensaje_final.appendChild(parrafo_final)
         parrafo_final.innerHTML = "¡DERROTA!"
-    } else if (estado == "victoria"){
+    } else if (estado == "Victoria"){
         mensaje_final.style.display = "block"
         mensaje_final.appendChild(parrafo_final)
         parrafo_final.innerHTML = "¡VICTORIA!"

@@ -10,6 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #293462;
+    width: 100vw;
 }
 /*Primera Pantalla*/
 #title{
@@ -146,6 +147,9 @@ body{
     height: 80%;
     width: 100%;
 }
+.ataque_responsive{
+    display: none;
+}
 .ataques{
     display: flex;
     margin: 5px 0px;
@@ -263,6 +267,9 @@ body{
         color: white;
         font-size: 1.5em;
     }
+    .ataque_responsive{
+        display: none;
+    }
     #boton_reiniciar{
         margin: 0 0 20px 0;
         width: 15%;
@@ -275,6 +282,100 @@ body{
     }
     .battle_title{
         font-size: 2.5em;
+        margin: 15px 0px; 
+    }
+}
+@media (max-width: 360px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #F7D716;
+    }
+    .tarjetas_personajes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 950px;
+    }
+    .personaje_container {
+        justify-content: space-around;
+    }
+    .personaje_container img{
+        height: 70%;
+        width: 80%;
+        border-radius: 25px;
+    }
+    .enemigo_container {
+        justify-content: space-around;
+    }
+    .enemigo_container img{
+        height: 75%;
+        width: 90%;
+    }
+    .mensaje_final{
+        background-color: #F24C4C;
+        position: absolute;
+        width: 25%;
+        height: 10%;
+        border: transparent;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .mensaje_final:hover{
+        background-color: #F24C4C;
+    }
+    .mensaje_final p{
+        height: 100%;
+        font-size: 0.5em;
+    }
+    .ataques{
+        display: flex;
+        margin: 5px 0px;
+        background-color: #293462;
+        border-radius: 20px;
+        width: 60%;
+        height: 70px;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        font-size: 1.2em;
+    }
+    .ataque_no_responsive{
+        display: none;
+    }
+    .ataque_responsive{
+        display: block;
+        margin: 0 2px;
+    }
+    #mensajes{
+        background-color: #293462;
+        color: white;
+        border-radius: 20px;
+        margin: 0px 0px 15px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 85%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1em;
+        height: 240px;
+    }
+    #boton_reiniciar{
+        margin: 0 0 20px 0;
+        width: 25%;
+        height: 50px;
+        background-color: #F24C4C;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 1em;
+    }
+    .battle_title{
+        font-size: 2em;
         margin: 15px 0px; 
     }
 }
